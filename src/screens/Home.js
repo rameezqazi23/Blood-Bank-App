@@ -28,7 +28,7 @@ function Home({ navigation }) {
         console.log('user data==>', user)
 
     }
-    
+
 
     return (
         <View style={{ flex: 1, justifyContent: 'center', textAlign: 'center' }}>
@@ -52,11 +52,15 @@ function Home({ navigation }) {
                 <Text style={styles.btntxt}>Add social Acc</Text>
             </TouchableOpacity>
 
+            <TouchableOpacity style={styles.btn} onPress={() => navigation.navigate('Test')}>
+                <Text style={styles.btntxt}>Test</Text>
+            </TouchableOpacity>
 
 
 
 
-        </View>
+
+        </View >
     )
 }
 
