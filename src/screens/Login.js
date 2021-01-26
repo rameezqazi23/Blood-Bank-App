@@ -32,7 +32,7 @@ function Login({ navigation }) {
                     console.log(data.val())
 
                 })
-                    .then(navigation.navigate('Home'))
+                    
 
                 // history.push('/Home')
                 alert("Sign In successfully")
@@ -149,7 +149,7 @@ const styles = StyleSheet.create({
         fontSize: 30,
     },
     main1: {
-        flex: 1,
+        flex: 0.5,
         width: "100%",
         backgroundColor: '#FFFF66',
         alignItems: 'center',
@@ -161,8 +161,8 @@ const styles = StyleSheet.create({
         width: 370,
         minHeight: 500,
         backgroundColor: 'white',
-        borderTopLeftRadius: 35,
-        borderTopRightRadius: 35,
+        borderTopLeftRadius: 55,
+        borderTopRightRadius: 55,
     },
     image1: {
         resizeMode: 'contain',
@@ -198,7 +198,8 @@ const styles = StyleSheet.create({
 
     },
     btn: {
-        alignItems: 'center',
+        alignItems: 'flex-start',
+        marginLeft: 25,
         color: 'white',
         paddingTop: 8,
     },
