@@ -13,8 +13,70 @@ import {
 } from 'react-native';
 
 import database from '@react-native-firebase/database';
+import auth from '@react-native-firebase/auth';
 
-function Login({navigation}) {
+function Login({ navigation }) {
+
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+
+    const signIn = () => {
+
+        auth().signInWithEmailAndPassword(email, password)
+            .then((userCredential) => {
+
+                var user = userCredential.user;
+                console.log("User Email==>", user.email)
+                console.log("User UID==>", user.uid)
+                // database().ref('/users').on('child_added', (data) => {
+                //     console.log(data.val())
+
+                // })
+
+                // history.push('/Home')
+                alert("Sign In successfully")
+
+
+                // ...
+            })
+            .catch((error) => {
+                var errorCode = error.code;
+                var errorMessage = error.message;
+                console.log('error message==>', errorMessage)
+                alert(errorMessage)
+            });
+
+
+
+
+
+
+
+    }
+
+    const signUp = () => {
+
+        auth().createUserWithEmailAndPassword(email, password)
+            .then((userCredential) => {
+                // Signed in 
+                var user = userCredential.user;
+                alert("Sign Up Successfully")
+                // database().ref('/').child('users').push({
+                //     email: user.email,
+                //     id: user.uid,
+                // })
+
+                // ...
+            })
+            .catch((error) => {
+                var errorCode = error.code;
+                var errorMessage = error.message;
+                alert(errorMessage)
+                // ..
+            })
+
+
+    }
 
     return (
         <ScrollView alwaysBounceVertical={true}>
@@ -32,13 +94,17 @@ function Login({navigation}) {
                 <View style={styles.main2}>
                     <Text style={styles.logintxt}>LOG IN</Text>
                     <Text style={{ marginLeft: 30, marginTop: 25, fontSize: 20, fontWeight: "bold" }}>Email</Text>
-                    <TextInput onChangeText={(e) => console.log(e)} style={styles.textinput} placeholder="Enter email" />
+                    <TextInput onChangeText={(e) => setEmail(e)} style={styles.textinput} placeholder="Enter email" />
 
                     <Text style={{ marginLeft: 30, marginTop: 25, fontSize: 20, fontWeight: "bold" }}>Password</Text>
-                    <TextInput onChangeText={(text) => console.log(text)} secureTextEntry={true} style={styles.textinput} placeholder="Enter password" />
+                    <TextInput onChangeText={(e) => setPassword(e)} secureTextEntry={true} style={styles.textinput} placeholder="Enter password" />
 
-                    <TouchableOpacity style={styles.btn} onPress={() => navigation.navigate('Home')}>
-                        <Text style={styles.btntxt}>Home</Text>
+                    <TouchableOpacity style={styles.btn} onPress={signIn}>
+                        <Text style={styles.btntxt}>Login</Text>
+                    </TouchableOpacity>
+
+                    <TouchableOpacity style={styles.btn} onPress={signUp}>
+                        <Text style={styles.btntxt}>Create Account</Text>
                     </TouchableOpacity>
                 </View>
 
