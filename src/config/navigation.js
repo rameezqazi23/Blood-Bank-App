@@ -4,10 +4,10 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
 //custom components
-import Home from '../screens/Home';
-import Gallery from '../screens/ImagePicker';
 import Login from '../screens/Login';
-import Test from '../screens/Test';
+import Home from '../screens/Home';
+// import Gallery from '../screens/ImagePicker';
+// import Test from '../screens/Test';
 
 
 
@@ -18,10 +18,10 @@ function AppNavigation() {
     return (
         <NavigationContainer>
             <Stack.Navigator>
+            <Stack.Screen name="Login" component={Login} />
                 <Stack.Screen name="Home" component={Home} />
-                <Stack.Screen name="Gallery" component={Gallery} />
-                <Stack.Screen name="Login" component={Login} />
-                <Stack.Screen name="Test" component={Test} />
+                {/* <Stack.Screen name="Gallery" component={Gallery} />
+                <Stack.Screen name="Test" component={Test} /> */}
             </Stack.Navigator>
         </NavigationContainer>
     );

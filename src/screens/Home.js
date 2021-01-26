@@ -32,7 +32,9 @@ function Home({ navigation }) {
 
     return (
         <View style={{ flex: 1, justifyContent: 'center', textAlign: 'center' }}>
-            <Text style={{ textAlign: 'center', fontSize: 25 }}>Home Screen</Text>
+
+            <Text style={{textAlign: 'center'}}>Home Page</Text>
+            {/* <Text style={{ textAlign: 'center', fontSize: 25 }}>Home Screen</Text>
             <TouchableOpacity style={styles.btn} onPress={() => navigation.navigate('Gallery')}>
                 <Text style={styles.btntxt}>Goto gallery</Text>
             </TouchableOpacity>
@@ -54,7 +56,7 @@ function Home({ navigation }) {
 
             <TouchableOpacity style={styles.btn} onPress={() => navigation.navigate('Test')}>
                 <Text style={styles.btntxt}>Test</Text>
-            </TouchableOpacity>
+            </TouchableOpacity> */}
 
 
 
