@@ -28,10 +28,10 @@ function Login({ navigation }) {
                 var user = userCredential.user;
                 console.log("User Email==>", user.email)
                 console.log("User UID==>", user.uid)
-                // database().ref('/users').on('child_added', (data) => {
-                //     console.log(data.val())
+                database().ref('/users').on('child_added', (data) => {
+                    console.log(data.val())
 
-                // })
+                })
 
                 // history.push('/Home')
                 alert("Sign In successfully")
@@ -61,10 +61,10 @@ function Login({ navigation }) {
                 // Signed in 
                 var user = userCredential.user;
                 alert("Sign Up Successfully")
-                // database().ref('/').child('users').push({
-                //     email: user.email,
-                //     id: user.uid,
-                // })
+                database().ref('/').child('users').push({
+                    email: user.email,
+                    id: user.uid,
+                })
 
                 // ...
             })
