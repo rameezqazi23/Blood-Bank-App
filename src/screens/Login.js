@@ -32,9 +32,12 @@ function Login({ navigation }) {
                     console.log(data.val())
 
                 })
+                    .then(navigation.navigate('Home'))
 
                 // history.push('/Home')
                 alert("Sign In successfully")
+
+
 
 
                 // ...
@@ -48,10 +51,6 @@ function Login({ navigation }) {
 
 
 
-
-
-
-
     }
 
     const signUp = () => {
@@ -61,7 +60,8 @@ function Login({ navigation }) {
                 // Signed in 
                 var user = userCredential.user;
                 alert("Sign Up Successfully")
-                database().ref('/').child('users').push({
+
+                database().ref('/').push({
                     email: user.email,
                     id: user.uid,
                 })
