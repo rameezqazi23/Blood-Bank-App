@@ -16,15 +16,21 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
-import AppNavigation from './src/config/navigation';
+import MainStackNavigator from './src/config/navigation';
+import { NavigationContainer } from '@react-navigation/native';
+import DrawerNav from './src/config/navigation';
 
 
-function App(){
-  return(
+function App() {
+  return (
     // <View>
     //   <Text>Hello World</Text>
     // </View>
-    <AppNavigation />
+    <NavigationContainer>
+      
+      <MainStackNavigator />
+
+    </NavigationContainer>
   )
 }
 
