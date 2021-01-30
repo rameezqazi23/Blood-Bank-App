@@ -32,7 +32,7 @@ function Login({ navigation }) {
                     console.log(data.val())
 
                 })
-                    
+
 
                 // history.push('/Home')
                 alert("Sign In successfully")
@@ -59,12 +59,13 @@ function Login({ navigation }) {
             .then((userCredential) => {
                 // Signed in 
                 var user = userCredential.user;
-                alert("Sign Up Successfully")
-
                 database().ref('/').child('/users').push({
                     email: user.email,
                     id: user.uid,
                 })
+                alert("Sign Up Successfully login again for further proceed")
+
+
 
                 // ...
             })
@@ -102,7 +103,7 @@ function Login({ navigation }) {
                     <TouchableOpacity style={styles.btn} onPress={signIn}>
                         <Text style={styles.btntxt}>Login</Text>
                     </TouchableOpacity>
-                    <Text style={{marginLeft: 70}}>or</Text>
+                    <Text style={{ marginLeft: 70 }}>or</Text>
                     <TouchableOpacity style={styles.btn} onPress={signUp}>
                         <Text style={styles.btntxt}>Create Account</Text>
                     </TouchableOpacity>
@@ -159,7 +160,7 @@ const styles = StyleSheet.create({
     main2: {
         flex: 2,
         width: "100%",
-        
+
         minHeight: 500,
         backgroundColor: 'white',
         borderTopLeftRadius: 55,
