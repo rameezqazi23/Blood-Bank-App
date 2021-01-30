@@ -32,6 +32,7 @@ function Login({ navigation }) {
                     console.log(data.val())
 
                 })
+                navigation.navigate("Home")
 
 
                 // history.push('/Home')
