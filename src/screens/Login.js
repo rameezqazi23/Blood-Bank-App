@@ -61,7 +61,7 @@ function Login({ navigation }) {
                 var user = userCredential.user;
                 alert("Sign Up Successfully")
 
-                database().ref('/').push({
+                database().ref('/').child('/users').push({
                     email: user.email,
                     id: user.uid,
                 })
@@ -86,7 +86,7 @@ function Login({ navigation }) {
 
                 <View style={styles.main1}>
                     <Image style={styles.image1} source={{ uri: 'https://qph.fs.quoracdn.net/main-qimg-56e5cd36ea29abdd5b981a9777c0669b' }} />
-                    <Image style={styles.image2} source={{ uri: 'https://media1.giphy.com/media/1poV2Eac3xFYFQQzve/source.gif' }} />
+                    {/* <Image style={styles.image2} source={{ uri: 'https://media1.giphy.com/media/1poV2Eac3xFYFQQzve/source.gif' }} /> */}
 
 
                 </View>
@@ -102,7 +102,7 @@ function Login({ navigation }) {
                     <TouchableOpacity style={styles.btn} onPress={signIn}>
                         <Text style={styles.btntxt}>Login</Text>
                     </TouchableOpacity>
-
+                    <Text style={{marginLeft: 70}}>or</Text>
                     <TouchableOpacity style={styles.btn} onPress={signUp}>
                         <Text style={styles.btntxt}>Create Account</Text>
                     </TouchableOpacity>
@@ -149,7 +149,7 @@ const styles = StyleSheet.create({
         fontSize: 30,
     },
     main1: {
-        flex: 0.5,
+        flex: 1,
         width: "100%",
         backgroundColor: '#FFFF66',
         alignItems: 'center',
@@ -157,8 +157,9 @@ const styles = StyleSheet.create({
         marginTop: 80,
     },
     main2: {
-        flex: 1,
-        width: 370,
+        flex: 2,
+        width: "100%",
+        
         minHeight: 500,
         backgroundColor: 'white',
         borderTopLeftRadius: 55,
@@ -199,7 +200,7 @@ const styles = StyleSheet.create({
     },
     btn: {
         alignItems: 'flex-start',
-        marginLeft: 25,
+        marginLeft: 30,
         color: 'white',
         paddingTop: 8,
     },
