@@ -32,17 +32,21 @@ function Home({ navigation }) {
     return (
         <View style={{ flex: 1, justifyContent: 'center', textAlign: 'center' }}>
 
-            <View style={{ width: 200, justifyContent: 'center', textAlign: 'center',alignContent: 'center' }}>
+            <View style={{ justifyContent: 'center', alignItems: 'center', marginBottom: 10 }}>
                 <Button
+                    onPress={() => navigation.navigate("UserDetails")}
                     title="Become a Donor"
                     type="outline"
                 />
+
+
+            </View>
+            <View style={{ justifyContent: 'center', alignItems: 'center' }}>
 
                 <Button
                     title="Find a Donor"
                     type="outline"
                 />
-
             </View>
 
 

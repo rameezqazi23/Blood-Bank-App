@@ -37,10 +37,6 @@ function Login({ navigation }) {
 
                 // history.push('/Home')
                 alert("Sign In successfully")
-
-
-
-
                 // ...
             })
             .catch((error) => {
