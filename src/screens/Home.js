@@ -44,6 +44,7 @@ function Home({ navigation }) {
             <View style={{ justifyContent: 'center', alignItems: 'center' }}>
 
                 <Button
+                    onPress={() => navigation.navigate("AddDetails")}
                     title="Find a Donor"
                     type="outline"
                 />

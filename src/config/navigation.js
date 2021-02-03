@@ -8,6 +8,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import Login from '../screens/Login';
 import Home from '../screens/Home';
 import UserDetails from '../screens/UserDetails';
+import AddDetails from '../screens/AddDetails';
 
 
 
@@ -22,6 +23,7 @@ function MainStackNavigator() {
             <Stack.Screen name="Login" component={Login} />
             <Stack.Screen name="Home" component={Home} />
             <Stack.Screen name="UserDetails" component={UserDetails} />
+            <Stack.Screen name="AddDetails" component={AddDetails} />
         </Stack.Navigator>
     );
 }
