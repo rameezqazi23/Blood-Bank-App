@@ -3,37 +3,47 @@ import {
     StyleSheet,
     View,
     Text,
-    TouchableOpacity,
-    TextInput,
 } from 'react-native';
+
+
+import { Button } from 'react-native-elements';
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 import database from '@react-native-firebase/database';
 
-
-
-
 function Home({ navigation }) {
 
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
-    const saveData = () => {
-        let user = {
-            email,
-            password,
+    // const [email, setEmail] = useState('');
+    // const [password, setPassword] = useState('');
+    // const saveData = () => {
+    //     let user = {
+    //         email,
+    //         password,
 
-        }
-        setEmail('')  //this will clear inputs...
-        setPassword('')
-        database().ref('/').child('users').push(user)
-        console.log('user data==>', user)
+    //     }
+    //     setEmail('')  //this will clear inputs...
+    //     setPassword('')
+    //     database().ref('/').child('users').push(user)
+    //     console.log('user data==>', user)
 
-    }
+    // }
 
 
     return (
         <View style={{ flex: 1, justifyContent: 'center', textAlign: 'center' }}>
 
-            <Text style={{ textAlign: 'center' }}>Home Page</Text>
+            <View style={{ width: 200, justifyContent: 'center', textAlign: 'center',alignContent: 'center' }}>
+                <Button
+                    title="Become a Donor"
+                    type="outline"
+                />
+
+                <Button
+                    title="Find a Donor"
+                    type="outline"
+                />
+
+            </View>
 
 
         </View >
