@@ -8,10 +8,10 @@ function UserDetails() {
     return (
         <View style={{ flex: 1, justifyContent: 'center', textAlign: 'center' }}>
 
-            <View style={{ borderStyle: 'solid', borderRadius: 15, borderWidth: 1, width: 300, justifyContent: 'center', alignSelf: 'center', alignContent: 'center' }}>
-                <View>
+            <View style={{ borderStyle: 'solid', borderRadius: 15, borderWidth: 1, width: 300, justifyContent: 'center', alignSelf: 'center' }}>
+                <View style={{ marginTop: 20 }}>
                     <Input
-                        placeholder='Enter Your Name'
+                        placeholder='Full Name'
                         leftIcon={
                             <Icon
                                 name='user'
@@ -24,7 +24,8 @@ function UserDetails() {
                 </View>
                 <View style={{ width: 200, justifyContent: 'center' }}>
                     <Input
-                        placeholder='Enter Your Name'
+                        placeholder='Email'
+                        autoCompleteType='email'
                         leftIcon={
                             <Icon
                                 name='user'
@@ -35,9 +36,12 @@ function UserDetails() {
                     />
 
                 </View>
-                <View>
+                <View style={{ width: 200, justifyContent: 'center' }}>
                     <Input
-                        placeholder='Enter Your Name'
+                        placeholder='Phone'
+                        keyboardType='number-pad'
+
+
                         leftIcon={
                             <Icon
                                 name='user'
@@ -48,9 +52,21 @@ function UserDetails() {
                     />
 
                 </View>
-                <View>
+                <View style={{ flexDirection: 'row', flexWrap: 'nowrap', width: 150, justifyContent: 'center', alignSelf: 'center', marginBottom: 30 }}>
                     <Input
-                        placeholder='Enter Your Name'
+                        placeholder='Age'
+                        keyboardType='number-pad'
+                        leftIcon={
+                            <Icon
+                                name='user'
+                                type='evilicon'
+                                color='#517fa4'
+                            />
+                        }
+                    />
+                    <Input
+                        placeholder='Weight'
+                        keyboardType='number-pad'
                         leftIcon={
                             <Icon
                                 name='user'
@@ -63,7 +79,7 @@ function UserDetails() {
                 </View>
 
 
-                
+
             </View>
 
 
