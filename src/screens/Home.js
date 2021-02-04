@@ -5,7 +5,6 @@ import {
     Text,
 } from 'react-native';
 
-
 import { Button } from 'react-native-elements';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
