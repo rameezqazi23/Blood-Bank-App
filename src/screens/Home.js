@@ -33,7 +33,7 @@ function Home({ navigation }) {
 
             <View style={{ justifyContent: 'center', alignItems: 'center', marginBottom: 10 }}>
                 <Button
-                    onPress={() => navigation.navigate("UserDetails")}
+                    onPress={() => navigation.navigate("DonateBlood")}
                     title="Become a Donor"
                     type="outline"
                 />
@@ -43,7 +43,7 @@ function Home({ navigation }) {
             <View style={{ justifyContent: 'center', alignItems: 'center' }}>
 
                 <Button
-                    onPress={() => navigation.navigate("AddDetails")}
+                    onPress={() => navigation.navigate("RequestBlood")}
                     title="Find a Donor"
                     type="outline"
                 />

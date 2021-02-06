@@ -7,8 +7,9 @@ import { createStackNavigator } from '@react-navigation/stack';
 //custom components
 import Login from '../screens/Login';
 import Home from '../screens/Home';
-import UserDetails from '../screens/UserDetails';
-import AddDetails from '../screens/AddDetails';
+import DonateBlood from '../screens/DonateBlood';
+import RequestBlood from '../screens/RequestBlood';
+import DonorDetails from '../screens/DonorDetails';
 
 
 
@@ -22,8 +23,9 @@ function MainStackNavigator() {
         <Stack.Navigator>
             <Stack.Screen name="Login" component={Login} />
             <Stack.Screen name="Home" component={Home} />
-            <Stack.Screen name="UserDetails" component={UserDetails} />
-            <Stack.Screen name="AddDetails" component={AddDetails} />
+            <Stack.Screen name="DonateBlood" component={DonateBlood} />
+            <Stack.Screen name="RequestBlood" component={RequestBlood} />
+            <Stack.Screen name="DonorDetails" component={DonorDetails} />
         </Stack.Navigator>
     );
 }
