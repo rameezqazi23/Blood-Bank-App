@@ -11,6 +11,7 @@ import {
 
 import { Button, Input } from 'react-native-elements';
 import Icon from 'react-native-vector-icons/FontAwesome';
+import database from '@react-native-firebase/database';
 // import { ScrollView } from 'react-native-gesture-handler';
 
 // import { Button, Input } from 'react-native-elements';
@@ -20,20 +21,35 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 
 function UserDetails() {
 
-    const [selectedValue, setSelectedValue] = useState('');
+    // const [selectedValue, setSelectedValue] = useState('');
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [phone, setPhone] = useState();
     const [age, setAge] = useState('');
     const [weight, setWeight] = useState('');
-    const [blooggroup, setBloodgroup] = useState('');
+    const [bloodGroup, setBloodgroup] = useState('');
 
     // const [details, setDetails] = useState({})
 
     const pushDetails = (e) => {
-        
+        database().ref('/').child('/donatePersonData').push({
+            name: name,
+            email: email,
+            phone: phone,
+            age: age,
+            weight: weight,
+            bloodgroup: bloodGroup,
+            
 
-        console.log("name==>", name, email, phone, age, weight, selectedValue)
+        })
+
+        setName('')
+        setEmail('')
+        setPhone('')
+        setAge('')
+        setWeight('')
+        setBloodgroup('')
+        console.log("name==>", name, email, phone, age, weight, bloodGroup)
     }
 
     return (
@@ -68,7 +84,7 @@ function UserDetails() {
                                 />
 
                             </View>
-                            <View style={{ width: 200, justifyContent: 'center' }}>
+                            <View style={{ width: 300, justifyContent: 'center' }}>
                                 <Input
                                     onChangeText={(e) => setEmail(e)}
                                     placeholder='Email'
@@ -130,9 +146,9 @@ function UserDetails() {
                             <View>
 
                                 <Picker
-                                    selectedValue={selectedValue}
+                                    selectedValue={bloodGroup}
                                     style={{ height: 50, width: 150, fontSize: 30 }}
-                                    onValueChange={(itemValue, itemIndex) => setSelectedValue(itemValue)}
+                                    onValueChange={(itemValue, itemIndex) => setBloodgroup(itemValue)}
                                 >
                                     <Picker.Item label="A+" value="A+" />
                                     <Picker.Item label="A-" value="A-" />
