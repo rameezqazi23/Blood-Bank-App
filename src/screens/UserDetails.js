@@ -26,7 +26,9 @@ function UserDetails() {
             <View style={styles.container}>
 
                 <View style={styles.main1}>
-                    <Text style={styles.headertxt}>Add Your Personal Details to become donor</Text>
+
+                    <Text style={styles.headertxt}>Add Your Personal Details to became a donor</Text>
+                    {/* <Text style={styles.headertxt}>Personal Details to become donor</Text> */}
 
 
                 </View>
@@ -139,11 +141,11 @@ const styles = StyleSheet.create({
     main1: {
         flex: 1,
         width: 360,
-        height: 250,
+        height: 200,
 
-        backgroundColor: '#1A73E8',
-        alignItems: 'center',
-        justifyContent: 'center',
+        backgroundColor: '#201F1d',
+        // alignItems: 'center',
+        // justifyContent: 'center',
         borderBottomLeftRadius: 60,
         borderBottomRightRadius: 60,
 
@@ -160,11 +162,15 @@ const styles = StyleSheet.create({
 
     },
     headertxt: {
-        fontSize: 30,
-       fontWeight: 'bold',
+        // display: 'flex',
+        // alignItems: 'stretch',
+        paddingTop: 30,
+        marginLeft: 15,
+        fontSize: 35,
+        fontWeight: 'bold',
         color: 'white',
-       
-        
+
+
     }
 
 
