@@ -37,6 +37,7 @@ function DonorDetails({ route, navigation }) {
                         Keep Donating Blood to help
                         the Humanity
                     </Text>
+                    
                     {/* <Text style={styles.headertxt}>Personal Details to become donor</Text> */}
 
 
@@ -49,7 +50,14 @@ function DonorDetails({ route, navigation }) {
                         <View style={{ borderStyle: 'solid', borderRadius: 15, borderWidth: 1, width: 300, justifyContent: 'center', alignSelf: 'center' }}>
 
                             <Text style={{ textAlign: 'center', fontSize: 20, fontWeight: 'bold' }}>Your Details</Text>
-
+                            <Text style={{fontSize: 17, fontWeight: 'bold', opacity: 0.7, paddingLeft: 10}}>Name: {name}</Text>
+                            <Text style={{fontSize: 17, fontWeight: 'bold', opacity: 0.7, paddingLeft: 10}}>Email: {email}</Text>
+                            <Text style={{fontSize: 17, fontWeight: 'bold', opacity: 0.7, paddingLeft: 10}}>Phone No: {phone}</Text>
+                            <Text style={{fontSize: 17, fontWeight: 'bold', opacity: 0.7, paddingLeft: 10}}>Age: {age}</Text>
+                            <Text style={{fontSize: 17, fontWeight: 'bold', opacity: 0.7, paddingLeft: 10}}>Wieght: {weight}</Text>
+                            <Text style={{fontSize: 17, fontWeight: 'bold', opacity: 0.7, paddingLeft: 10}}>Blood Group: {bloodGroup}</Text>
+                            
+                            
 
                         </View>
 
