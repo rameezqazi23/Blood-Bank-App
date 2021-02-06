@@ -20,7 +20,21 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 
 function UserDetails() {
 
-    const [selectedValue, setSelectedValue] = useState("A+");
+    const [selectedValue, setSelectedValue] = useState('');
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [phone, setPhone] = useState();
+    const [age, setAge] = useState('');
+    const [weight, setWeight] = useState('');
+    const [blooggroup, setBloodgroup] = useState('');
+
+    // const [details, setDetails] = useState({})
+
+    const pushDetails = (e) => {
+        
+
+        console.log("name==>", name, email, phone, age, weight, selectedValue)
+    }
 
     return (
 
@@ -42,6 +56,7 @@ function UserDetails() {
                         <View style={{ borderStyle: 'solid', borderRadius: 15, borderWidth: 1, width: 300, justifyContent: 'center', alignSelf: 'center' }}>
                             <View style={{ marginTop: 20 }}>
                                 <Input
+                                    onChangeText={(e) => setName(e)}
                                     placeholder='Full Name'
                                     leftIcon={
                                         <Icon
@@ -55,6 +70,7 @@ function UserDetails() {
                             </View>
                             <View style={{ width: 200, justifyContent: 'center' }}>
                                 <Input
+                                    onChangeText={(e) => setEmail(e)}
                                     placeholder='Email'
                                     autoCompleteType='email'
                                     leftIcon={
@@ -69,6 +85,7 @@ function UserDetails() {
                             </View>
                             <View style={{ width: 200, justifyContent: 'center' }}>
                                 <Input
+                                onChangeText={(e)=>setPhone(e)}
                                     placeholder='Phone'
                                     keyboardType='number-pad'
 
@@ -85,6 +102,7 @@ function UserDetails() {
                             </View>
                             <View style={{ flexDirection: 'row', flexWrap: 'nowrap', width: 150, justifyContent: 'center', alignSelf: 'center', marginBottom: 30 }}>
                                 <Input
+                                    onChangeText={(e)=>setAge(e)}
                                     placeholder='Age'
                                     keyboardType='number-pad'
                                     leftIcon={
@@ -96,6 +114,7 @@ function UserDetails() {
                                     }
                                 />
                                 <Input
+                                    onChangeText={(e)=>setWeight(e)}
                                     placeholder='Weight'
                                     keyboardType='number-pad'
                                     leftIcon={
@@ -136,6 +155,7 @@ function UserDetails() {
                         <View style={{ justifyContent: 'center', alignItems: 'center', marginTop: 30 }}>
 
                             <Button
+                                onPress={pushDetails}
                                 title="Click here to proceed"
 
                             />
