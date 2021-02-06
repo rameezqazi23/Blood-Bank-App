@@ -4,8 +4,7 @@ import {
     View,
     StyleSheet,
     ScrollView,
-    SafeAreaView,
-    StatusBar,
+    Picker,
 } from 'react-native';
 
 //Become Donor
@@ -20,6 +19,9 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 // import UserDetails from './UserDetails';
 
 function UserDetails() {
+
+    const [selectedValue, setSelectedValue] = useState("A+");
+
     return (
 
         <ScrollView>
@@ -73,7 +75,7 @@ function UserDetails() {
 
                                     leftIcon={
                                         <Icon
-                                            name='user'
+                                            name='phone'
                                             type='evilicon'
                                             color='#517fa4'
                                         />
@@ -106,8 +108,37 @@ function UserDetails() {
                                 />
 
                             </View>
+                            <View>
+
+                                <Picker
+                                    selectedValue={selectedValue}
+                                    style={{ height: 50, width: 150, fontSize: 30 }}
+                                    onValueChange={(itemValue, itemIndex) => setSelectedValue(itemValue)}
+                                >
+                                    <Picker.Item label="A+" value="A+" />
+                                    <Picker.Item label="A-" value="A-" />
+                                    <Picker.Item label="B+" value="A+" />
+                                    <Picker.Item label="B-" value="B-" />
+                                    <Picker.Item label="O+" value="O+" />
+                                    <Picker.Item label="O-" value="O-" />
+                                    <Picker.Item label="AB+" value="AB+" />
+                                    <Picker.Item label="AB-" value="AB-" />
 
 
+                                </Picker>
+                            </View>
+
+
+
+
+
+                        </View>
+                        <View style={{ justifyContent: 'center', alignItems: 'center', marginTop: 30 }}>
+
+                            <Button
+                                title="Click here to proceed"
+
+                            />
 
                         </View>
 
