@@ -19,7 +19,7 @@ import database from '@react-native-firebase/database';
 // import Icon from 'react-native-vector-icons/FontAwesome';
 // import UserDetails from './UserDetails';
 
-function DonateBlood({navigation}) {
+function DonateBlood({ navigation }) {
 
     // const [selectedValue, setSelectedValue] = useState('');
     const [name, setName] = useState('');
@@ -42,7 +42,7 @@ function DonateBlood({navigation}) {
 
 
         })
-        navigation.navigate("DonorDetails")
+        navigation.navigate("DonorDetails", { name, email, phone, age, weight, bloodGroup })
 
         setName('')
         setEmail('')
@@ -50,7 +50,7 @@ function DonateBlood({navigation}) {
         setAge('')
         setWeight('')
         setBloodgroup('')
-        
+
         // console.log("name==>", name, email, phone, age, weight, bloodGroup)
     }
 

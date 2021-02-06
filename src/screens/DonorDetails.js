@@ -8,47 +8,21 @@ import {
 } from 'react-native';
 
 //Donor Details
-
 import { Button, Input } from 'react-native-elements';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import database from '@react-native-firebase/database';
-// import { ScrollView } from 'react-native-gesture-handler';
 
 
 
-function DonorDetails(name) {
+function DonorDetails({ route, navigation }) {
 
-    // const [name, setName] = useState('');
-    // const [email, setEmail] = useState('');
-    // const [phone, setPhone] = useState();
-    // const [age, setAge] = useState('');
-    // const [weight, setWeight] = useState('');
-    // const [bloodGroup, setBloodgroup] = useState('');
-
-    // // const [details, setDetails] = useState({})
-
-    // const pushDetails = (e) => {
-    //     database().ref('/').child('/donatePersonData').push({
-    //         name: name,
-    //         email: email,
-    //         phone: phone,
-    //         age: age,
-    //         weight: weight,
-    //         bloodgroup: bloodGroup,
+    // const {name, email, phone, age, weight, bloodGroup} = props;
+    const { name, email, phone, age, weight, bloodGroup } = route.params;
+    console.log("Details goes here==>", name, email, phone, age, weight, bloodGroup)
 
 
-    //     })
-    //     navigation.navigate("DonorDetails")
 
-    //     setName('')
-    //     setEmail('')
-    //     setPhone('')
-    //     setAge('')
-    //     setWeight('')
-    //     setBloodgroup('')
-        
-    // }
-    console.log("name here==>",name )
+
 
     return (
 
@@ -73,12 +47,12 @@ function DonorDetails(name) {
                     <View style={{ justifyContent: 'center', textAlign: 'center' }}>
 
                         <View style={{ borderStyle: 'solid', borderRadius: 15, borderWidth: 1, width: 300, justifyContent: 'center', alignSelf: 'center' }}>
-                            
-                            <Text style={{textAlign: 'center', fontSize: 20, fontWeight: 'bold'}}>Your Details</Text>
+
+                            <Text style={{ textAlign: 'center', fontSize: 20, fontWeight: 'bold' }}>Your Details</Text>
 
 
                         </View>
-                        
+
 
 
 
