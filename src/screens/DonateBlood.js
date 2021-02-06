@@ -21,7 +21,6 @@ import database from '@react-native-firebase/database';
 
 function DonateBlood({ navigation }) {
 
-    // const [selectedValue, setSelectedValue] = useState('');
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [phone, setPhone] = useState();

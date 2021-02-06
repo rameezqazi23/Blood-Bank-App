@@ -10,6 +10,7 @@ import Home from '../screens/Home';
 import DonateBlood from '../screens/DonateBlood';
 import RequestBlood from '../screens/RequestBlood';
 import DonorDetails from '../screens/DonorDetails';
+import GetAllDonors from '../screens/GetAllDonors';
 
 
 
@@ -26,6 +27,7 @@ function MainStackNavigator() {
             <Stack.Screen name="DonateBlood" component={DonateBlood} />
             <Stack.Screen name="RequestBlood" component={RequestBlood} />
             <Stack.Screen name="DonorDetails" component={DonorDetails} />
+            <Stack.Screen name="GetAllDonors" component={GetAllDonors}/>
         </Stack.Navigator>
     );
 }
